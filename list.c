@@ -63,7 +63,6 @@ void * lastList(List * list)
     list -> current = list -> current -> next;
   }
   
-  //list -> current = list -> current -> next;
   return (list -> current -> data);
 }
 
@@ -87,13 +86,14 @@ void pushFront(List * list, void * data)
   newNode -> prev = NULL;
   newNode -> next = list -> head;
 
-  if (!list -> head) list -> head -> prev = newNode;
+  //if (list -> head) list -> head -> prev = newNode;
   list -> head = newNode;
 }
 
-void pushBack(List * list, void * data) {
-    list->current = list->tail;
-    pushCurrent(list,data);
+void pushBack(List * list, void * data) 
+{
+  list->current = list->tail;
+  pushCurrent(list,data);
 }
 
 void pushCurrent(List * list, void * data) {
