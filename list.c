@@ -70,7 +70,7 @@ void * prevList(List * list)
 {
   list -> current = list -> head;
 
-  while (list -> current -> prev == NULL)
+  while (list -> current != NULL)
   {
     list -> current = list -> current -> prev;
   }
