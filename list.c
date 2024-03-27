@@ -93,7 +93,15 @@ void pushFront(List * list, void * data)
 
 void pushBack(List * list, void * data) 
 {
-  list->current = list->tail;
+  Node* newNode = (Node*) malloc(sizeof(Node));
+  newNode -> data = data;
+  list -> current = list -> tail;
+  newNode -> next = NULL;
+  newNode -> prev = list -> current;
+  if (list -> tail) list -> tail -> next = newNode;
+  list -> tail = newNode;
+  if (list -> head == NULL) list -> head = newNode;
+  
   pushCurrent(list,data);
 }
 
