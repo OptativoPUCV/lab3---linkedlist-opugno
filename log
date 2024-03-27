@@ -224,3 +224,20 @@ Wed 27 Mar 2024 08:48:46 PM UTC:
  tests:  7|3
 total_score: 35/70
 591cdc9
+Wed 27 Mar 2024 09:00:46 PM UTC: 
+ list.c | 26 +++++++++++++++++++-------
+ 1 file changed, 19 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:119:5: error: statement with no effect [-Werror=unused-value]
+  119 |     newNode
+      |     ^~~~~~~
+list.c:119:12: error: expected ‘;’ before ‘}’ token
+  119 |     newNode
+      |            ^
+      |            ;
+  120 |   }
+      |   ~         
+cc1: all warnings being treated as errors
+Compilation failed
+a0be06d
