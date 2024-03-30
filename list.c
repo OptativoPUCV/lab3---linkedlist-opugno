@@ -144,10 +144,10 @@ void * popCurrent(List * list)
   if (list -> current == NULL) return NULL;
 
   if (now -> prev == NULL) list -> head = now -> next;
-  else now -> prev = now -> next -> next;
+  else now -> prev -> next = now -> next;
 
   if (now -> next == NULL) list -> tail = now -> prev;
-  else now -> next = now -> prev -> prev;
+  else now -> next -> prev = now -> prev;
 
   return now -> data;
 }
