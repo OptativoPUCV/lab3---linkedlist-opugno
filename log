@@ -299,3 +299,9 @@ list.c:110:3: error: ‘newNode’ undeclared (first use in this function); did 
 list.c:110:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 e6943e3
+Sat 30 Mar 2024 04:51:14 PM UTC: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  10|2
+total_score: 45/70
+0e4e363
