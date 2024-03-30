@@ -287,3 +287,15 @@ list.c:116:5: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 2d01704
+Sat 30 Mar 2024 04:50:49 PM UTC: 
+ list.c | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:110:3: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+  110 |   newNode->data = data;
+      |   ^~~~~~~
+      |   Node
+list.c:110:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e6943e3
