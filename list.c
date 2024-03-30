@@ -113,7 +113,7 @@ void pushCurrent(List * list, void * data)
   
   if (list -> current -> next != NULL)
   {
-    newNode
+    newNode;
   }
 }
 
