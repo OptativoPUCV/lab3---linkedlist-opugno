@@ -145,6 +145,11 @@ void * popCurrent(List * list)
 
   if (now -> prev == NULL) list -> head = now -> next;
   else now -> prev = now -> next -> next;
+
+  if (now -> next == NULL) list -> tail = now -> prev;
+  else now -> next = now -> prev -> prev;
+
+  return now -> data;
 }
 
 void cleanList(List * list) 
